@@ -1,0 +1,1258 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:site_name" content="롤낳대">
+    <meta property="og:title" content="제 2회 롤낳대">
+    <meta property="og:description" content="제 2회 롤낳대에 참가하세요!">
+    <meta property="og:image" content="http://www.롤낳대.site/롤낳대/img/embed.png">
+    <meta property="og:url" content="http://www.롤낳대.site/">
+    <title>롤낳대</title>
+    <link rel="icon" type="image/ico" href="롤낳대/img/롤낳대.ico" />
+    <link rel="stylesheet" href="롤낳대/source/style.css">
+</head>
+
+<body>
+    <header>
+        <h1 id="title">롤낳대</h1>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="card">
+                <div class="face face1">
+                    <div class="content">
+                        <h3>소개</h3>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <div class="content">
+                        <p> 각 대표가 주어진 포인트로 경매를 통하여 팀원을 낙찰한 후 구성된 팀으로 경기를
+                            진행하는 대회입니다.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="face face1">
+                    <div class="content">
+                        <h3>참가비</h3>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <div class="content">
+                        <p> 참가비는 10,000원이며, 운영을 위한 최소한을 제외한 나머지 금액는 상금으로 사용됩니다.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="face face1">
+                    <div class="content">
+                        <h3>상금</h3>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <div class="content">
+                        <p> 추후에 공개됩니다.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="face face1">
+                    <div class="content">
+                        <h3>일정</h3>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <div class="content">
+                        <p> 12월 26일: 개막식 및 경매</p>
+                        <p> 12월 26일 ~ 12월 29일: 연습</p>
+                        <p> 12월 30일 ~ 01월 03일: 그룹 스테이지</p>
+                        <p> 01월 04일 ~ 01월 05일: 8강</p>
+                        <p> 01월 06일: 4강</p>
+                        <p> 01월 07일: 결승</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="face face1">
+                    <div class="content">
+                        <h3>문의</h3>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <div class="content">
+                        <p> 대회에 관한 문의 사항은 디스코드 lcy412로 문의하세요.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <h3>현재 신청 인원: <span id="applicantsCount">0</span> 명</h3>
+        </div>
+
+        <div class="application-box">
+            <h2>참가 신청</h2>
+            <form action="/submit" method="post">
+                <div class="user-box">
+                    <label for="name">이름</label>
+                    <input type="text" id="name" name="name" placeholder="이상혁" required>
+                </div>
+
+                <div class="user-box">
+                    <label for="riotid">Riot ID</label>
+                    <input type="text" id="riotid" name="riotid" placeholder="Hide on bush #KR1" required>
+                </div>
+
+                <div class="user-box">
+                    <label for="currrank">현재 달성 랭크</label>
+                    <select id="currrank" name="currrank" required>
+                        <option value="UnRank">랭크 없음</option>
+                        <option value="Iron">아이언</option>
+                        <option value="Bronze">브론즈</option>
+                        <option value="Silver">실버</option>
+                        <option value="Gold">골드</option>
+                        <option value="Platinum">플레티넘</option>
+                        <option value="Emerald">에메랄드</option>
+                        <option value="Diamond">다이아몬드</option>
+                        <option value="Master">마스터</option>
+                        <option value="Grandmaster">그랜드마스터</option>
+                        <option value="Challenger">챌린저</option>
+                    </select>
+                </div>
+
+                <div class="user-box">
+                    <label for="toprank">최고 달성 랭크</label>
+                    <select id="toprank" name="toprank" required>
+                        <option value="UnRank">랭크 없음</option>
+                        <option value="Iron">아이언</option>
+                        <option value="Bronze">브론즈</option>
+                        <option value="Silver">실버</option>
+                        <option value="Gold">골드</option>
+                        <option value="Platinum">플레티넘</option>
+                        <option value="Emerald">에메랄드</option>
+                        <option value="Diamond">다이아몬드</option>
+                        <option value="Master">마스터</option>
+                        <option value="Grandmaster">그랜드마스터</option>
+                        <option value="Challenger">챌린저</option>
+                    </select>
+
+                    <select id="toprankseason" name="toprankseason" required disabled>
+                        <option value="season2">시즌 2</option>
+                        <option value="season3">시즌 3</option>
+                        <option value="season4">시즌 4</option>
+                        <option value="season5">시즌 5</option>
+                        <option value="season6">시즌 6</option>
+                        <option value="season7">시즌 7</option>
+                        <option value="season8">시즌 8</option>
+                        <option value="season9">시즌 9</option>
+                        <option value="season10">시즌 10</option>
+                        <option value="season11">시즌 11</option>
+                        <option value="season12">시즌 12</option>
+                        <option value="season13">시즌 13</option>
+                    </select>
+                </div>
+
+                <div class="user-box">
+                    <label>주 포지션</label>
+                    <div>
+                        <input type="radio" class="lineCheckbox" id="maintop" name="mainline" value="Top">
+                        <label for="maintop">탑</label>
+                    </div>
+                    <div>
+                        <input type="radio" class="lineCheckbox" id="mainjungle" name="mainline" value="Jungle">
+                        <label for="mainjungle">정글</label>
+                    </div>
+                    <div>
+                        <input type="radio" class="lineCheckbox" id="mainmid" name="mainline" value="Mid">
+                        <label for="mainmid">미드</label>
+                    </div>
+                    <div>
+                        <input type="radio" class="lineCheckbox" id="mainbottom" name="mainline" value="Bottom">
+                        <label for="mainbottom">봇</label>
+                    </div>
+                    <div>
+                        <input type="radio" class="lineCheckbox" id="mainsupport" name="mainline" value="Support">
+                        <label for="mainsupport">서포터</label>
+                    </div>
+                </div>
+
+                <div class="user-box">
+                    <label>주 포지션 챔피언</label>
+                    <select name="mainlinechampion[]" id="mainline1" required disabled>
+                        <option value="가렌">가렌</option>
+                        <option value="갈리오">갈리오</option>
+                        <option value="갱플랭크">갱플랭크</option>
+                        <option value="그라가스">그라가스</option>
+                        <option value="그레이브즈">그레이브즈</option>
+                        <option value="그웬">그웬</option>
+                        <option value="나르">나르</option>
+                        <option value="나미">나미</option>
+                        <option value="나서스">나서스</option>
+                        <option value="나피리">나피리</option>
+                        <option value="노틸러스">노틸러스</option>
+                        <option value="녹턴">녹턴</option>
+                        <option value="누누와 윌럼프">누누와 윌럼프</option>
+                        <option value="니달리">니달리</option>
+                        <option value="니코">니코</option>
+                        <option value="닐라">닐라</option>
+                        <option value="다리우스">다리우스</option>
+                        <option value="다이애나">다이애나</option>
+                        <option value="드레이븐">드레이븐</option>
+                        <option value="라이즈">라이즈</option>
+                        <option value="라칸">라칸</option>
+                        <option value="람머스">람머스</option>
+                        <option value="럭스">럭스</option>
+                        <option value="럼블">럼블</option>
+                        <option value="레나타 글라스크">레나타 글라스크</option>
+                        <option value="레넥톤">레넥톤</option>
+                        <option value="레오나">레오나</option>
+                        <option value="렉사이">렉사이</option>
+                        <option value="렐">렐</option>
+                        <option value="렝가">렝가</option>
+                        <option value="루시안">루시안</option>
+                        <option value="룰루">룰루</option>
+                        <option value="르블랑">르블랑</option>
+                        <option value="리 신">리 신</option>
+                        <option value="리븐">리븐</option>
+                        <option value="리산드라">리산드라</option>
+                        <option value="릴리아">릴리아</option>
+                        <option value="마스터 이">마스터 이</option>
+                        <option value="마오카이">마오카이</option>
+                        <option value="말자하">말자하</option>
+                        <option value="말파이트">말파이트</option>
+                        <option value="모데카이저">모데카이저</option>
+                        <option value="모르가나">모르가나</option>
+                        <option value="문도 박사">문도 박사</option>
+                        <option value="미스 포츈">미스 포츈</option>
+                        <option value="밀리오">밀리오</option>
+                        <option value="바드">바드</option>
+                        <option value="바루스">바루스</option>
+                        <option value="바이">바이</option>
+                        <option value="베이가">베이가</option>
+                        <option value="베인">베인</option>
+                        <option value="벡스">벡스</option>
+                        <option value="벨베스">벨베스</option>
+                        <option value="벨코즈">벨코즈</option>
+                        <option value="볼리베어">볼리베어</option>
+                        <option value="브라움">브라움</option>
+                        <option value="브라이어">브라이어</option>
+                        <option value="브랜드">브랜드</option>
+                        <option value="블라디미르">블라디미르</option>
+                        <option value="블리츠크랭크">블리츠크랭크</option>
+                        <option value="비에고">비에고</option>
+                        <option value="빅토르">빅토르</option>
+                        <option value="뽀삐">뽀삐</option>
+                        <option value="사미라">사미라</option>
+                        <option value="사이온">사이온</option>
+                        <option value="사일러스">사일러스</option>
+                        <option value="샤코">샤코</option>
+                        <option value="세나">세나</option>
+                        <option value="세라핀">세라핀</option>
+                        <option value="세주아니">세주아니</option>
+                        <option value="세트">세트</option>
+                        <option value="소나">소나</option>
+                        <option value="소라카">소라카</option>
+                        <option value="쉔">쉔</option>
+                        <option value="쉬바나">쉬바나</option>
+                        <option value="스웨인">스웨인</option>
+                        <option value="스카너">스카너</option>
+                        <option value="시비르">시비르</option>
+                        <option value="신 짜오">신 짜오</option>
+                        <option value="신드라">신드라</option>
+                        <option value="신지드">신지드</option>
+                        <option value="쓰레쉬">쓰레쉬</option>
+                        <option value="아리">아리</option>
+                        <option value="아무무">아무무</option>
+                        <option value="아우렐리온 솔">아우렐리온 솔</option>
+                        <option value="아이번">아이번</option>
+                        <option value="아지르">아지르</option>
+                        <option value="아칼리">아칼리</option>
+                        <option value="아크샨">아크샨</option>
+                        <option value="아트록스">아트록스</option>
+                        <option value="아펠리오스">아펠리오스</option>
+                        <option value="알리스타">알리스타</option>
+                        <option value="애니">애니</option>
+                        <option value="애니비아">애니비아</option>
+                        <option value="애쉬">애쉬</option>
+                        <option value="야스오">야스오</option>
+                        <option value="에코">에코</option>
+                        <option value="엘리스">엘리스</option>
+                        <option value="오공">오공</option>
+                        <option value="오른">오른</option>
+                        <option value="오리아나">오리아나</option>
+                        <option value="올라프">올라프</option>
+                        <option value="요네">요네</option>
+                        <option value="요릭">요릭</option>
+                        <option value="우디르">우디르</option>
+                        <option value="우르곳">우르곳</option>
+                        <option value="워윅">워윅</option>
+                        <option value="유미">유미</option>
+                        <option value="이렐리아">이렐리아</option>
+                        <option value="이블린">이블린</option>
+                        <option value="이즈리얼">이즈리얼</option>
+                        <option value="일라오이">일라오이</option>
+                        <option value="자르반 4세">자르반 4세</option>
+                        <option value="자야">자야</option>
+                        <option value="자이라">자이라</option>
+                        <option value="자크">자크</option>
+                        <option value="잔나">잔나</option>
+                        <option value="잭스">잭스</option>
+                        <option value="제드">제드</option>
+                        <option value="제라스">제라스</option>
+                        <option value="제리">제리</option>
+                        <option value="제이스">제이스</option>
+                        <option value="조이">조이</option>
+                        <option value="직스">직스</option>
+                        <option value="진">진</option>
+                        <option value="질리언">질리언</option>
+                        <option value="징크스">징크스</option>
+                        <option value="초가스">초가스</option>
+                        <option value="카르마">카르마</option>
+                        <option value="카밀">카밀</option>
+                        <option value="카사딘">카사딘</option>
+                        <option value="카서스">카서스</option>
+                        <option value="카시오페아">카시오페아</option>
+                        <option value="카이사">카이사</option>
+                        <option value="카직스">카직스</option>
+                        <option value="카타리나">카타리나</option>
+                        <option value="칼리스타">칼리스타</option>
+                        <option value="케넨">케넨</option>
+                        <option value="케이틀린">케이틀린</option>
+                        <option value="케인">케인</option>
+                        <option value="케일">케일</option>
+                        <option value="코그모">코그모</option>
+                        <option value="코르키">코르키</option>
+                        <option value="퀸">퀸</option>
+                        <option value="크산테">크산테</option>
+                        <option value="클레드">클레드</option>
+                        <option value="키아나">키아나</option>
+                        <option value="킨드레드">킨드레드</option>
+                        <option value="타릭">타릭</option>
+                        <option value="탈론">탈론</option>
+                        <option value="탈리야">탈리야</option>
+                        <option value="탐 켄치">탐 켄치</option>
+                        <option value="트런들">트런들</option>
+                        <option value="트리스타나">트리스타나</option>
+                        <option value="트린다미어">트린다미어</option>
+                        <option value="트위스티드 페이트">트위스티드 페이트</option>
+                        <option value="트위치">트위치</option>
+                        <option value="티모">티모</option>
+                        <option value="파이크">파이크</option>
+                        <option value="판테온">판테온</option>
+                        <option value="피들스틱">피들스틱</option>
+                        <option value="피오라">피오라</option>
+                        <option value="피즈">피즈</option>
+                        <option value="하이머딩거">하이머딩거</option>
+                        <option value="헤카림">헤카림</option>
+                    </select>
+                    <select name="mainlinechampion[]" id="mainline2" disabled>
+                        <option value="가렌">가렌</option>
+                        <option value="갈리오">갈리오</option>
+                        <option value="갱플랭크">갱플랭크</option>
+                        <option value="그라가스">그라가스</option>
+                        <option value="그레이브즈">그레이브즈</option>
+                        <option value="그웬">그웬</option>
+                        <option value="나르">나르</option>
+                        <option value="나미">나미</option>
+                        <option value="나서스">나서스</option>
+                        <option value="나피리">나피리</option>
+                        <option value="노틸러스">노틸러스</option>
+                        <option value="녹턴">녹턴</option>
+                        <option value="누누와 윌럼프">누누와 윌럼프</option>
+                        <option value="니달리">니달리</option>
+                        <option value="니코">니코</option>
+                        <option value="닐라">닐라</option>
+                        <option value="다리우스">다리우스</option>
+                        <option value="다이애나">다이애나</option>
+                        <option value="드레이븐">드레이븐</option>
+                        <option value="라이즈">라이즈</option>
+                        <option value="라칸">라칸</option>
+                        <option value="람머스">람머스</option>
+                        <option value="럭스">럭스</option>
+                        <option value="럼블">럼블</option>
+                        <option value="레나타 글라스크">레나타 글라스크</option>
+                        <option value="레넥톤">레넥톤</option>
+                        <option value="레오나">레오나</option>
+                        <option value="렉사이">렉사이</option>
+                        <option value="렐">렐</option>
+                        <option value="렝가">렝가</option>
+                        <option value="루시안">루시안</option>
+                        <option value="룰루">룰루</option>
+                        <option value="르블랑">르블랑</option>
+                        <option value="리 신">리 신</option>
+                        <option value="리븐">리븐</option>
+                        <option value="리산드라">리산드라</option>
+                        <option value="릴리아">릴리아</option>
+                        <option value="마스터 이">마스터 이</option>
+                        <option value="마오카이">마오카이</option>
+                        <option value="말자하">말자하</option>
+                        <option value="말파이트">말파이트</option>
+                        <option value="모데카이저">모데카이저</option>
+                        <option value="모르가나">모르가나</option>
+                        <option value="문도 박사">문도 박사</option>
+                        <option value="미스 포츈">미스 포츈</option>
+                        <option value="밀리오">밀리오</option>
+                        <option value="바드">바드</option>
+                        <option value="바루스">바루스</option>
+                        <option value="바이">바이</option>
+                        <option value="베이가">베이가</option>
+                        <option value="베인">베인</option>
+                        <option value="벡스">벡스</option>
+                        <option value="벨베스">벨베스</option>
+                        <option value="벨코즈">벨코즈</option>
+                        <option value="볼리베어">볼리베어</option>
+                        <option value="브라움">브라움</option>
+                        <option value="브라이어">브라이어</option>
+                        <option value="브랜드">브랜드</option>
+                        <option value="블라디미르">블라디미르</option>
+                        <option value="블리츠크랭크">블리츠크랭크</option>
+                        <option value="비에고">비에고</option>
+                        <option value="빅토르">빅토르</option>
+                        <option value="뽀삐">뽀삐</option>
+                        <option value="사미라">사미라</option>
+                        <option value="사이온">사이온</option>
+                        <option value="사일러스">사일러스</option>
+                        <option value="샤코">샤코</option>
+                        <option value="세나">세나</option>
+                        <option value="세라핀">세라핀</option>
+                        <option value="세주아니">세주아니</option>
+                        <option value="세트">세트</option>
+                        <option value="소나">소나</option>
+                        <option value="소라카">소라카</option>
+                        <option value="쉔">쉔</option>
+                        <option value="쉬바나">쉬바나</option>
+                        <option value="스웨인">스웨인</option>
+                        <option value="스카너">스카너</option>
+                        <option value="시비르">시비르</option>
+                        <option value="신 짜오">신 짜오</option>
+                        <option value="신드라">신드라</option>
+                        <option value="신지드">신지드</option>
+                        <option value="쓰레쉬">쓰레쉬</option>
+                        <option value="아리">아리</option>
+                        <option value="아무무">아무무</option>
+                        <option value="아우렐리온 솔">아우렐리온 솔</option>
+                        <option value="아이번">아이번</option>
+                        <option value="아지르">아지르</option>
+                        <option value="아칼리">아칼리</option>
+                        <option value="아크샨">아크샨</option>
+                        <option value="아트록스">아트록스</option>
+                        <option value="아펠리오스">아펠리오스</option>
+                        <option value="알리스타">알리스타</option>
+                        <option value="애니">애니</option>
+                        <option value="애니비아">애니비아</option>
+                        <option value="애쉬">애쉬</option>
+                        <option value="야스오">야스오</option>
+                        <option value="에코">에코</option>
+                        <option value="엘리스">엘리스</option>
+                        <option value="오공">오공</option>
+                        <option value="오른">오른</option>
+                        <option value="오리아나">오리아나</option>
+                        <option value="올라프">올라프</option>
+                        <option value="요네">요네</option>
+                        <option value="요릭">요릭</option>
+                        <option value="우디르">우디르</option>
+                        <option value="우르곳">우르곳</option>
+                        <option value="워윅">워윅</option>
+                        <option value="유미">유미</option>
+                        <option value="이렐리아">이렐리아</option>
+                        <option value="이블린">이블린</option>
+                        <option value="이즈리얼">이즈리얼</option>
+                        <option value="일라오이">일라오이</option>
+                        <option value="자르반 4세">자르반 4세</option>
+                        <option value="자야">자야</option>
+                        <option value="자이라">자이라</option>
+                        <option value="자크">자크</option>
+                        <option value="잔나">잔나</option>
+                        <option value="잭스">잭스</option>
+                        <option value="제드">제드</option>
+                        <option value="제라스">제라스</option>
+                        <option value="제리">제리</option>
+                        <option value="제이스">제이스</option>
+                        <option value="조이">조이</option>
+                        <option value="직스">직스</option>
+                        <option value="진">진</option>
+                        <option value="질리언">질리언</option>
+                        <option value="징크스">징크스</option>
+                        <option value="초가스">초가스</option>
+                        <option value="카르마">카르마</option>
+                        <option value="카밀">카밀</option>
+                        <option value="카사딘">카사딘</option>
+                        <option value="카서스">카서스</option>
+                        <option value="카시오페아">카시오페아</option>
+                        <option value="카이사">카이사</option>
+                        <option value="카직스">카직스</option>
+                        <option value="카타리나">카타리나</option>
+                        <option value="칼리스타">칼리스타</option>
+                        <option value="케넨">케넨</option>
+                        <option value="케이틀린">케이틀린</option>
+                        <option value="케인">케인</option>
+                        <option value="케일">케일</option>
+                        <option value="코그모">코그모</option>
+                        <option value="코르키">코르키</option>
+                        <option value="퀸">퀸</option>
+                        <option value="크산테">크산테</option>
+                        <option value="클레드">클레드</option>
+                        <option value="키아나">키아나</option>
+                        <option value="킨드레드">킨드레드</option>
+                        <option value="타릭">타릭</option>
+                        <option value="탈론">탈론</option>
+                        <option value="탈리야">탈리야</option>
+                        <option value="탐 켄치">탐 켄치</option>
+                        <option value="트런들">트런들</option>
+                        <option value="트리스타나">트리스타나</option>
+                        <option value="트린다미어">트린다미어</option>
+                        <option value="트위스티드 페이트">트위스티드 페이트</option>
+                        <option value="트위치">트위치</option>
+                        <option value="티모">티모</option>
+                        <option value="파이크">파이크</option>
+                        <option value="판테온">판테온</option>
+                        <option value="피들스틱">피들스틱</option>
+                        <option value="피오라">피오라</option>
+                        <option value="피즈">피즈</option>
+                        <option value="하이머딩거">하이머딩거</option>
+                        <option value="헤카림">헤카림</option>
+                    </select>
+                    <select name="mainlinechampion[]" id="mainline3" disabled>
+                        <option value="가렌">가렌</option>
+                        <option value="갈리오">갈리오</option>
+                        <option value="갱플랭크">갱플랭크</option>
+                        <option value="그라가스">그라가스</option>
+                        <option value="그레이브즈">그레이브즈</option>
+                        <option value="그웬">그웬</option>
+                        <option value="나르">나르</option>
+                        <option value="나미">나미</option>
+                        <option value="나서스">나서스</option>
+                        <option value="나피리">나피리</option>
+                        <option value="노틸러스">노틸러스</option>
+                        <option value="녹턴">녹턴</option>
+                        <option value="누누와 윌럼프">누누와 윌럼프</option>
+                        <option value="니달리">니달리</option>
+                        <option value="니코">니코</option>
+                        <option value="닐라">닐라</option>
+                        <option value="다리우스">다리우스</option>
+                        <option value="다이애나">다이애나</option>
+                        <option value="드레이븐">드레이븐</option>
+                        <option value="라이즈">라이즈</option>
+                        <option value="라칸">라칸</option>
+                        <option value="람머스">람머스</option>
+                        <option value="럭스">럭스</option>
+                        <option value="럼블">럼블</option>
+                        <option value="레나타 글라스크">레나타 글라스크</option>
+                        <option value="레넥톤">레넥톤</option>
+                        <option value="레오나">레오나</option>
+                        <option value="렉사이">렉사이</option>
+                        <option value="렐">렐</option>
+                        <option value="렝가">렝가</option>
+                        <option value="루시안">루시안</option>
+                        <option value="룰루">룰루</option>
+                        <option value="르블랑">르블랑</option>
+                        <option value="리 신">리 신</option>
+                        <option value="리븐">리븐</option>
+                        <option value="리산드라">리산드라</option>
+                        <option value="릴리아">릴리아</option>
+                        <option value="마스터 이">마스터 이</option>
+                        <option value="마오카이">마오카이</option>
+                        <option value="말자하">말자하</option>
+                        <option value="말파이트">말파이트</option>
+                        <option value="모데카이저">모데카이저</option>
+                        <option value="모르가나">모르가나</option>
+                        <option value="문도 박사">문도 박사</option>
+                        <option value="미스 포츈">미스 포츈</option>
+                        <option value="밀리오">밀리오</option>
+                        <option value="바드">바드</option>
+                        <option value="바루스">바루스</option>
+                        <option value="바이">바이</option>
+                        <option value="베이가">베이가</option>
+                        <option value="베인">베인</option>
+                        <option value="벡스">벡스</option>
+                        <option value="벨베스">벨베스</option>
+                        <option value="벨코즈">벨코즈</option>
+                        <option value="볼리베어">볼리베어</option>
+                        <option value="브라움">브라움</option>
+                        <option value="브라이어">브라이어</option>
+                        <option value="브랜드">브랜드</option>
+                        <option value="블라디미르">블라디미르</option>
+                        <option value="블리츠크랭크">블리츠크랭크</option>
+                        <option value="비에고">비에고</option>
+                        <option value="빅토르">빅토르</option>
+                        <option value="뽀삐">뽀삐</option>
+                        <option value="사미라">사미라</option>
+                        <option value="사이온">사이온</option>
+                        <option value="사일러스">사일러스</option>
+                        <option value="샤코">샤코</option>
+                        <option value="세나">세나</option>
+                        <option value="세라핀">세라핀</option>
+                        <option value="세주아니">세주아니</option>
+                        <option value="세트">세트</option>
+                        <option value="소나">소나</option>
+                        <option value="소라카">소라카</option>
+                        <option value="쉔">쉔</option>
+                        <option value="쉬바나">쉬바나</option>
+                        <option value="스웨인">스웨인</option>
+                        <option value="스카너">스카너</option>
+                        <option value="시비르">시비르</option>
+                        <option value="신 짜오">신 짜오</option>
+                        <option value="신드라">신드라</option>
+                        <option value="신지드">신지드</option>
+                        <option value="쓰레쉬">쓰레쉬</option>
+                        <option value="아리">아리</option>
+                        <option value="아무무">아무무</option>
+                        <option value="아우렐리온 솔">아우렐리온 솔</option>
+                        <option value="아이번">아이번</option>
+                        <option value="아지르">아지르</option>
+                        <option value="아칼리">아칼리</option>
+                        <option value="아크샨">아크샨</option>
+                        <option value="아트록스">아트록스</option>
+                        <option value="아펠리오스">아펠리오스</option>
+                        <option value="알리스타">알리스타</option>
+                        <option value="애니">애니</option>
+                        <option value="애니비아">애니비아</option>
+                        <option value="애쉬">애쉬</option>
+                        <option value="야스오">야스오</option>
+                        <option value="에코">에코</option>
+                        <option value="엘리스">엘리스</option>
+                        <option value="오공">오공</option>
+                        <option value="오른">오른</option>
+                        <option value="오리아나">오리아나</option>
+                        <option value="올라프">올라프</option>
+                        <option value="요네">요네</option>
+                        <option value="요릭">요릭</option>
+                        <option value="우디르">우디르</option>
+                        <option value="우르곳">우르곳</option>
+                        <option value="워윅">워윅</option>
+                        <option value="유미">유미</option>
+                        <option value="이렐리아">이렐리아</option>
+                        <option value="이블린">이블린</option>
+                        <option value="이즈리얼">이즈리얼</option>
+                        <option value="일라오이">일라오이</option>
+                        <option value="자르반 4세">자르반 4세</option>
+                        <option value="자야">자야</option>
+                        <option value="자이라">자이라</option>
+                        <option value="자크">자크</option>
+                        <option value="잔나">잔나</option>
+                        <option value="잭스">잭스</option>
+                        <option value="제드">제드</option>
+                        <option value="제라스">제라스</option>
+                        <option value="제리">제리</option>
+                        <option value="제이스">제이스</option>
+                        <option value="조이">조이</option>
+                        <option value="직스">직스</option>
+                        <option value="진">진</option>
+                        <option value="질리언">질리언</option>
+                        <option value="징크스">징크스</option>
+                        <option value="초가스">초가스</option>
+                        <option value="카르마">카르마</option>
+                        <option value="카밀">카밀</option>
+                        <option value="카사딘">카사딘</option>
+                        <option value="카서스">카서스</option>
+                        <option value="카시오페아">카시오페아</option>
+                        <option value="카이사">카이사</option>
+                        <option value="카직스">카직스</option>
+                        <option value="카타리나">카타리나</option>
+                        <option value="칼리스타">칼리스타</option>
+                        <option value="케넨">케넨</option>
+                        <option value="케이틀린">케이틀린</option>
+                        <option value="케인">케인</option>
+                        <option value="케일">케일</option>
+                        <option value="코그모">코그모</option>
+                        <option value="코르키">코르키</option>
+                        <option value="퀸">퀸</option>
+                        <option value="크산테">크산테</option>
+                        <option value="클레드">클레드</option>
+                        <option value="키아나">키아나</option>
+                        <option value="킨드레드">킨드레드</option>
+                        <option value="타릭">타릭</option>
+                        <option value="탈론">탈론</option>
+                        <option value="탈리야">탈리야</option>
+                        <option value="탐 켄치">탐 켄치</option>
+                        <option value="트런들">트런들</option>
+                        <option value="트리스타나">트리스타나</option>
+                        <option value="트린다미어">트린다미어</option>
+                        <option value="트위스티드 페이트">트위스티드 페이트</option>
+                        <option value="트위치">트위치</option>
+                        <option value="티모">티모</option>
+                        <option value="파이크">파이크</option>
+                        <option value="판테온">판테온</option>
+                        <option value="피들스틱">피들스틱</option>
+                        <option value="피오라">피오라</option>
+                        <option value="피즈">피즈</option>
+                        <option value="하이머딩거">하이머딩거</option>
+                        <option value="헤카림">헤카림</option>
+                    </select>
+                </div>
+
+                <div class="user-box">
+                    <label>부 포지션</label>
+                    <div>
+                        <input type="radio" class="lineCheckbox" id="subtop" name="subline" value="Top" disabled>
+                        <label for="subtop">탑</label>
+                    </div>
+                    <div>
+                        <input type="radio" class="lineCheckbox" id="subjungle" name="subline" value="Jungle" disabled>
+                        <label for="subjungle">정글</label>
+                    </div>
+                    <div>
+                        <input type="radio" class="lineCheckbox" id="submid" name="subline" value="Mid" disabled>
+                        <label for="submid">미드</label>
+                    </div>
+                    <div>
+                        <input type="radio" class="lineCheckbox" id="subbottom" name="subline" value="Bottom" disabled>
+                        <label for="subbottom">봇</label>
+                    </div>
+                    <div>
+                        <input type="radio" class="lineCheckbox" id="subsupport" name="subline" value="Support"
+                            disabled>
+                        <label for="subsupport">서포터</label>
+                    </div>
+                </div>
+
+                <div class="user-box">
+                    <label>부 포지션 챔피언</label>
+                    <select name="sublinechampion[]" id="subline1" disabled>
+                        <option value="가렌">가렌</option>
+                        <option value="갈리오">갈리오</option>
+                        <option value="갱플랭크">갱플랭크</option>
+                        <option value="그라가스">그라가스</option>
+                        <option value="그레이브즈">그레이브즈</option>
+                        <option value="그웬">그웬</option>
+                        <option value="나르">나르</option>
+                        <option value="나미">나미</option>
+                        <option value="나서스">나서스</option>
+                        <option value="나피리">나피리</option>
+                        <option value="노틸러스">노틸러스</option>
+                        <option value="녹턴">녹턴</option>
+                        <option value="누누와 윌럼프">누누와 윌럼프</option>
+                        <option value="니달리">니달리</option>
+                        <option value="니코">니코</option>
+                        <option value="닐라">닐라</option>
+                        <option value="다리우스">다리우스</option>
+                        <option value="다이애나">다이애나</option>
+                        <option value="드레이븐">드레이븐</option>
+                        <option value="라이즈">라이즈</option>
+                        <option value="라칸">라칸</option>
+                        <option value="람머스">람머스</option>
+                        <option value="럭스">럭스</option>
+                        <option value="럼블">럼블</option>
+                        <option value="레나타 글라스크">레나타 글라스크</option>
+                        <option value="레넥톤">레넥톤</option>
+                        <option value="레오나">레오나</option>
+                        <option value="렉사이">렉사이</option>
+                        <option value="렐">렐</option>
+                        <option value="렝가">렝가</option>
+                        <option value="루시안">루시안</option>
+                        <option value="룰루">룰루</option>
+                        <option value="르블랑">르블랑</option>
+                        <option value="리 신">리 신</option>
+                        <option value="리븐">리븐</option>
+                        <option value="리산드라">리산드라</option>
+                        <option value="릴리아">릴리아</option>
+                        <option value="마스터 이">마스터 이</option>
+                        <option value="마오카이">마오카이</option>
+                        <option value="말자하">말자하</option>
+                        <option value="말파이트">말파이트</option>
+                        <option value="모데카이저">모데카이저</option>
+                        <option value="모르가나">모르가나</option>
+                        <option value="문도 박사">문도 박사</option>
+                        <option value="미스 포츈">미스 포츈</option>
+                        <option value="밀리오">밀리오</option>
+                        <option value="바드">바드</option>
+                        <option value="바루스">바루스</option>
+                        <option value="바이">바이</option>
+                        <option value="베이가">베이가</option>
+                        <option value="베인">베인</option>
+                        <option value="벡스">벡스</option>
+                        <option value="벨베스">벨베스</option>
+                        <option value="벨코즈">벨코즈</option>
+                        <option value="볼리베어">볼리베어</option>
+                        <option value="브라움">브라움</option>
+                        <option value="브라이어">브라이어</option>
+                        <option value="브랜드">브랜드</option>
+                        <option value="블라디미르">블라디미르</option>
+                        <option value="블리츠크랭크">블리츠크랭크</option>
+                        <option value="비에고">비에고</option>
+                        <option value="빅토르">빅토르</option>
+                        <option value="뽀삐">뽀삐</option>
+                        <option value="사미라">사미라</option>
+                        <option value="사이온">사이온</option>
+                        <option value="사일러스">사일러스</option>
+                        <option value="샤코">샤코</option>
+                        <option value="세나">세나</option>
+                        <option value="세라핀">세라핀</option>
+                        <option value="세주아니">세주아니</option>
+                        <option value="세트">세트</option>
+                        <option value="소나">소나</option>
+                        <option value="소라카">소라카</option>
+                        <option value="쉔">쉔</option>
+                        <option value="쉬바나">쉬바나</option>
+                        <option value="스웨인">스웨인</option>
+                        <option value="스카너">스카너</option>
+                        <option value="시비르">시비르</option>
+                        <option value="신 짜오">신 짜오</option>
+                        <option value="신드라">신드라</option>
+                        <option value="신지드">신지드</option>
+                        <option value="쓰레쉬">쓰레쉬</option>
+                        <option value="아리">아리</option>
+                        <option value="아무무">아무무</option>
+                        <option value="아우렐리온 솔">아우렐리온 솔</option>
+                        <option value="아이번">아이번</option>
+                        <option value="아지르">아지르</option>
+                        <option value="아칼리">아칼리</option>
+                        <option value="아크샨">아크샨</option>
+                        <option value="아트록스">아트록스</option>
+                        <option value="아펠리오스">아펠리오스</option>
+                        <option value="알리스타">알리스타</option>
+                        <option value="애니">애니</option>
+                        <option value="애니비아">애니비아</option>
+                        <option value="애쉬">애쉬</option>
+                        <option value="야스오">야스오</option>
+                        <option value="에코">에코</option>
+                        <option value="엘리스">엘리스</option>
+                        <option value="오공">오공</option>
+                        <option value="오른">오른</option>
+                        <option value="오리아나">오리아나</option>
+                        <option value="올라프">올라프</option>
+                        <option value="요네">요네</option>
+                        <option value="요릭">요릭</option>
+                        <option value="우디르">우디르</option>
+                        <option value="우르곳">우르곳</option>
+                        <option value="워윅">워윅</option>
+                        <option value="유미">유미</option>
+                        <option value="이렐리아">이렐리아</option>
+                        <option value="이블린">이블린</option>
+                        <option value="이즈리얼">이즈리얼</option>
+                        <option value="일라오이">일라오이</option>
+                        <option value="자르반 4세">자르반 4세</option>
+                        <option value="자야">자야</option>
+                        <option value="자이라">자이라</option>
+                        <option value="자크">자크</option>
+                        <option value="잔나">잔나</option>
+                        <option value="잭스">잭스</option>
+                        <option value="제드">제드</option>
+                        <option value="제라스">제라스</option>
+                        <option value="제리">제리</option>
+                        <option value="제이스">제이스</option>
+                        <option value="조이">조이</option>
+                        <option value="직스">직스</option>
+                        <option value="진">진</option>
+                        <option value="질리언">질리언</option>
+                        <option value="징크스">징크스</option>
+                        <option value="초가스">초가스</option>
+                        <option value="카르마">카르마</option>
+                        <option value="카밀">카밀</option>
+                        <option value="카사딘">카사딘</option>
+                        <option value="카서스">카서스</option>
+                        <option value="카시오페아">카시오페아</option>
+                        <option value="카이사">카이사</option>
+                        <option value="카직스">카직스</option>
+                        <option value="카타리나">카타리나</option>
+                        <option value="칼리스타">칼리스타</option>
+                        <option value="케넨">케넨</option>
+                        <option value="케이틀린">케이틀린</option>
+                        <option value="케인">케인</option>
+                        <option value="케일">케일</option>
+                        <option value="코그모">코그모</option>
+                        <option value="코르키">코르키</option>
+                        <option value="퀸">퀸</option>
+                        <option value="크산테">크산테</option>
+                        <option value="클레드">클레드</option>
+                        <option value="키아나">키아나</option>
+                        <option value="킨드레드">킨드레드</option>
+                        <option value="타릭">타릭</option>
+                        <option value="탈론">탈론</option>
+                        <option value="탈리야">탈리야</option>
+                        <option value="탐 켄치">탐 켄치</option>
+                        <option value="트런들">트런들</option>
+                        <option value="트리스타나">트리스타나</option>
+                        <option value="트린다미어">트린다미어</option>
+                        <option value="트위스티드 페이트">트위스티드 페이트</option>
+                        <option value="트위치">트위치</option>
+                        <option value="티모">티모</option>
+                        <option value="파이크">파이크</option>
+                        <option value="판테온">판테온</option>
+                        <option value="피들스틱">피들스틱</option>
+                        <option value="피오라">피오라</option>
+                        <option value="피즈">피즈</option>
+                        <option value="하이머딩거">하이머딩거</option>
+                        <option value="헤카림">헤카림</option>
+                    </select>
+                    <select name="sublinechampion[]" id="subline2" disabled>
+                        <option value="가렌">가렌</option>
+                        <option value="갈리오">갈리오</option>
+                        <option value="갱플랭크">갱플랭크</option>
+                        <option value="그라가스">그라가스</option>
+                        <option value="그레이브즈">그레이브즈</option>
+                        <option value="그웬">그웬</option>
+                        <option value="나르">나르</option>
+                        <option value="나미">나미</option>
+                        <option value="나서스">나서스</option>
+                        <option value="나피리">나피리</option>
+                        <option value="노틸러스">노틸러스</option>
+                        <option value="녹턴">녹턴</option>
+                        <option value="누누와 윌럼프">누누와 윌럼프</option>
+                        <option value="니달리">니달리</option>
+                        <option value="니코">니코</option>
+                        <option value="닐라">닐라</option>
+                        <option value="다리우스">다리우스</option>
+                        <option value="다이애나">다이애나</option>
+                        <option value="드레이븐">드레이븐</option>
+                        <option value="라이즈">라이즈</option>
+                        <option value="라칸">라칸</option>
+                        <option value="람머스">람머스</option>
+                        <option value="럭스">럭스</option>
+                        <option value="럼블">럼블</option>
+                        <option value="레나타 글라스크">레나타 글라스크</option>
+                        <option value="레넥톤">레넥톤</option>
+                        <option value="레오나">레오나</option>
+                        <option value="렉사이">렉사이</option>
+                        <option value="렐">렐</option>
+                        <option value="렝가">렝가</option>
+                        <option value="루시안">루시안</option>
+                        <option value="룰루">룰루</option>
+                        <option value="르블랑">르블랑</option>
+                        <option value="리 신">리 신</option>
+                        <option value="리븐">리븐</option>
+                        <option value="리산드라">리산드라</option>
+                        <option value="릴리아">릴리아</option>
+                        <option value="마스터 이">마스터 이</option>
+                        <option value="마오카이">마오카이</option>
+                        <option value="말자하">말자하</option>
+                        <option value="말파이트">말파이트</option>
+                        <option value="모데카이저">모데카이저</option>
+                        <option value="모르가나">모르가나</option>
+                        <option value="문도 박사">문도 박사</option>
+                        <option value="미스 포츈">미스 포츈</option>
+                        <option value="밀리오">밀리오</option>
+                        <option value="바드">바드</option>
+                        <option value="바루스">바루스</option>
+                        <option value="바이">바이</option>
+                        <option value="베이가">베이가</option>
+                        <option value="베인">베인</option>
+                        <option value="벡스">벡스</option>
+                        <option value="벨베스">벨베스</option>
+                        <option value="벨코즈">벨코즈</option>
+                        <option value="볼리베어">볼리베어</option>
+                        <option value="브라움">브라움</option>
+                        <option value="브라이어">브라이어</option>
+                        <option value="브랜드">브랜드</option>
+                        <option value="블라디미르">블라디미르</option>
+                        <option value="블리츠크랭크">블리츠크랭크</option>
+                        <option value="비에고">비에고</option>
+                        <option value="빅토르">빅토르</option>
+                        <option value="뽀삐">뽀삐</option>
+                        <option value="사미라">사미라</option>
+                        <option value="사이온">사이온</option>
+                        <option value="사일러스">사일러스</option>
+                        <option value="샤코">샤코</option>
+                        <option value="세나">세나</option>
+                        <option value="세라핀">세라핀</option>
+                        <option value="세주아니">세주아니</option>
+                        <option value="세트">세트</option>
+                        <option value="소나">소나</option>
+                        <option value="소라카">소라카</option>
+                        <option value="쉔">쉔</option>
+                        <option value="쉬바나">쉬바나</option>
+                        <option value="스웨인">스웨인</option>
+                        <option value="스카너">스카너</option>
+                        <option value="시비르">시비르</option>
+                        <option value="신 짜오">신 짜오</option>
+                        <option value="신드라">신드라</option>
+                        <option value="신지드">신지드</option>
+                        <option value="쓰레쉬">쓰레쉬</option>
+                        <option value="아리">아리</option>
+                        <option value="아무무">아무무</option>
+                        <option value="아우렐리온 솔">아우렐리온 솔</option>
+                        <option value="아이번">아이번</option>
+                        <option value="아지르">아지르</option>
+                        <option value="아칼리">아칼리</option>
+                        <option value="아크샨">아크샨</option>
+                        <option value="아트록스">아트록스</option>
+                        <option value="아펠리오스">아펠리오스</option>
+                        <option value="알리스타">알리스타</option>
+                        <option value="애니">애니</option>
+                        <option value="애니비아">애니비아</option>
+                        <option value="애쉬">애쉬</option>
+                        <option value="야스오">야스오</option>
+                        <option value="에코">에코</option>
+                        <option value="엘리스">엘리스</option>
+                        <option value="오공">오공</option>
+                        <option value="오른">오른</option>
+                        <option value="오리아나">오리아나</option>
+                        <option value="올라프">올라프</option>
+                        <option value="요네">요네</option>
+                        <option value="요릭">요릭</option>
+                        <option value="우디르">우디르</option>
+                        <option value="우르곳">우르곳</option>
+                        <option value="워윅">워윅</option>
+                        <option value="유미">유미</option>
+                        <option value="이렐리아">이렐리아</option>
+                        <option value="이블린">이블린</option>
+                        <option value="이즈리얼">이즈리얼</option>
+                        <option value="일라오이">일라오이</option>
+                        <option value="자르반 4세">자르반 4세</option>
+                        <option value="자야">자야</option>
+                        <option value="자이라">자이라</option>
+                        <option value="자크">자크</option>
+                        <option value="잔나">잔나</option>
+                        <option value="잭스">잭스</option>
+                        <option value="제드">제드</option>
+                        <option value="제라스">제라스</option>
+                        <option value="제리">제리</option>
+                        <option value="제이스">제이스</option>
+                        <option value="조이">조이</option>
+                        <option value="직스">직스</option>
+                        <option value="진">진</option>
+                        <option value="질리언">질리언</option>
+                        <option value="징크스">징크스</option>
+                        <option value="초가스">초가스</option>
+                        <option value="카르마">카르마</option>
+                        <option value="카밀">카밀</option>
+                        <option value="카사딘">카사딘</option>
+                        <option value="카서스">카서스</option>
+                        <option value="카시오페아">카시오페아</option>
+                        <option value="카이사">카이사</option>
+                        <option value="카직스">카직스</option>
+                        <option value="카타리나">카타리나</option>
+                        <option value="칼리스타">칼리스타</option>
+                        <option value="케넨">케넨</option>
+                        <option value="케이틀린">케이틀린</option>
+                        <option value="케인">케인</option>
+                        <option value="케일">케일</option>
+                        <option value="코그모">코그모</option>
+                        <option value="코르키">코르키</option>
+                        <option value="퀸">퀸</option>
+                        <option value="크산테">크산테</option>
+                        <option value="클레드">클레드</option>
+                        <option value="키아나">키아나</option>
+                        <option value="킨드레드">킨드레드</option>
+                        <option value="타릭">타릭</option>
+                        <option value="탈론">탈론</option>
+                        <option value="탈리야">탈리야</option>
+                        <option value="탐 켄치">탐 켄치</option>
+                        <option value="트런들">트런들</option>
+                        <option value="트리스타나">트리스타나</option>
+                        <option value="트린다미어">트린다미어</option>
+                        <option value="트위스티드 페이트">트위스티드 페이트</option>
+                        <option value="트위치">트위치</option>
+                        <option value="티모">티모</option>
+                        <option value="파이크">파이크</option>
+                        <option value="판테온">판테온</option>
+                        <option value="피들스틱">피들스틱</option>
+                        <option value="피오라">피오라</option>
+                        <option value="피즈">피즈</option>
+                        <option value="하이머딩거">하이머딩거</option>
+                        <option value="헤카림">헤카림</option>
+                    </select>
+                    <select name="sublinechampion[]" id="subline3" disabled>
+                        <option value="가렌">가렌</option>
+                        <option value="갈리오">갈리오</option>
+                        <option value="갱플랭크">갱플랭크</option>
+                        <option value="그라가스">그라가스</option>
+                        <option value="그레이브즈">그레이브즈</option>
+                        <option value="그웬">그웬</option>
+                        <option value="나르">나르</option>
+                        <option value="나미">나미</option>
+                        <option value="나서스">나서스</option>
+                        <option value="나피리">나피리</option>
+                        <option value="노틸러스">노틸러스</option>
+                        <option value="녹턴">녹턴</option>
+                        <option value="누누와 윌럼프">누누와 윌럼프</option>
+                        <option value="니달리">니달리</option>
+                        <option value="니코">니코</option>
+                        <option value="닐라">닐라</option>
+                        <option value="다리우스">다리우스</option>
+                        <option value="다이애나">다이애나</option>
+                        <option value="드레이븐">드레이븐</option>
+                        <option value="라이즈">라이즈</option>
+                        <option value="라칸">라칸</option>
+                        <option value="람머스">람머스</option>
+                        <option value="럭스">럭스</option>
+                        <option value="럼블">럼블</option>
+                        <option value="레나타 글라스크">레나타 글라스크</option>
+                        <option value="레넥톤">레넥톤</option>
+                        <option value="레오나">레오나</option>
+                        <option value="렉사이">렉사이</option>
+                        <option value="렐">렐</option>
+                        <option value="렝가">렝가</option>
+                        <option value="루시안">루시안</option>
+                        <option value="룰루">룰루</option>
+                        <option value="르블랑">르블랑</option>
+                        <option value="리 신">리 신</option>
+                        <option value="리븐">리븐</option>
+                        <option value="리산드라">리산드라</option>
+                        <option value="릴리아">릴리아</option>
+                        <option value="마스터 이">마스터 이</option>
+                        <option value="마오카이">마오카이</option>
+                        <option value="말자하">말자하</option>
+                        <option value="말파이트">말파이트</option>
+                        <option value="모데카이저">모데카이저</option>
+                        <option value="모르가나">모르가나</option>
+                        <option value="문도 박사">문도 박사</option>
+                        <option value="미스 포츈">미스 포츈</option>
+                        <option value="밀리오">밀리오</option>
+                        <option value="바드">바드</option>
+                        <option value="바루스">바루스</option>
+                        <option value="바이">바이</option>
+                        <option value="베이가">베이가</option>
+                        <option value="베인">베인</option>
+                        <option value="벡스">벡스</option>
+                        <option value="벨베스">벨베스</option>
+                        <option value="벨코즈">벨코즈</option>
+                        <option value="볼리베어">볼리베어</option>
+                        <option value="브라움">브라움</option>
+                        <option value="브라이어">브라이어</option>
+                        <option value="브랜드">브랜드</option>
+                        <option value="블라디미르">블라디미르</option>
+                        <option value="블리츠크랭크">블리츠크랭크</option>
+                        <option value="비에고">비에고</option>
+                        <option value="빅토르">빅토르</option>
+                        <option value="뽀삐">뽀삐</option>
+                        <option value="사미라">사미라</option>
+                        <option value="사이온">사이온</option>
+                        <option value="사일러스">사일러스</option>
+                        <option value="샤코">샤코</option>
+                        <option value="세나">세나</option>
+                        <option value="세라핀">세라핀</option>
+                        <option value="세주아니">세주아니</option>
+                        <option value="세트">세트</option>
+                        <option value="소나">소나</option>
+                        <option value="소라카">소라카</option>
+                        <option value="쉔">쉔</option>
+                        <option value="쉬바나">쉬바나</option>
+                        <option value="스웨인">스웨인</option>
+                        <option value="스카너">스카너</option>
+                        <option value="시비르">시비르</option>
+                        <option value="신 짜오">신 짜오</option>
+                        <option value="신드라">신드라</option>
+                        <option value="신지드">신지드</option>
+                        <option value="쓰레쉬">쓰레쉬</option>
+                        <option value="아리">아리</option>
+                        <option value="아무무">아무무</option>
+                        <option value="아우렐리온 솔">아우렐리온 솔</option>
+                        <option value="아이번">아이번</option>
+                        <option value="아지르">아지르</option>
+                        <option value="아칼리">아칼리</option>
+                        <option value="아크샨">아크샨</option>
+                        <option value="아트록스">아트록스</option>
+                        <option value="아펠리오스">아펠리오스</option>
+                        <option value="알리스타">알리스타</option>
+                        <option value="애니">애니</option>
+                        <option value="애니비아">애니비아</option>
+                        <option value="애쉬">애쉬</option>
+                        <option value="야스오">야스오</option>
+                        <option value="에코">에코</option>
+                        <option value="엘리스">엘리스</option>
+                        <option value="오공">오공</option>
+                        <option value="오른">오른</option>
+                        <option value="오리아나">오리아나</option>
+                        <option value="올라프">올라프</option>
+                        <option value="요네">요네</option>
+                        <option value="요릭">요릭</option>
+                        <option value="우디르">우디르</option>
+                        <option value="우르곳">우르곳</option>
+                        <option value="워윅">워윅</option>
+                        <option value="유미">유미</option>
+                        <option value="이렐리아">이렐리아</option>
+                        <option value="이블린">이블린</option>
+                        <option value="이즈리얼">이즈리얼</option>
+                        <option value="일라오이">일라오이</option>
+                        <option value="자르반 4세">자르반 4세</option>
+                        <option value="자야">자야</option>
+                        <option value="자이라">자이라</option>
+                        <option value="자크">자크</option>
+                        <option value="잔나">잔나</option>
+                        <option value="잭스">잭스</option>
+                        <option value="제드">제드</option>
+                        <option value="제라스">제라스</option>
+                        <option value="제리">제리</option>
+                        <option value="제이스">제이스</option>
+                        <option value="조이">조이</option>
+                        <option value="직스">직스</option>
+                        <option value="진">진</option>
+                        <option value="질리언">질리언</option>
+                        <option value="징크스">징크스</option>
+                        <option value="초가스">초가스</option>
+                        <option value="카르마">카르마</option>
+                        <option value="카밀">카밀</option>
+                        <option value="카사딘">카사딘</option>
+                        <option value="카서스">카서스</option>
+                        <option value="카시오페아">카시오페아</option>
+                        <option value="카이사">카이사</option>
+                        <option value="카직스">카직스</option>
+                        <option value="카타리나">카타리나</option>
+                        <option value="칼리스타">칼리스타</option>
+                        <option value="케넨">케넨</option>
+                        <option value="케이틀린">케이틀린</option>
+                        <option value="케인">케인</option>
+                        <option value="케일">케일</option>
+                        <option value="코그모">코그모</option>
+                        <option value="코르키">코르키</option>
+                        <option value="퀸">퀸</option>
+                        <option value="크산테">크산테</option>
+                        <option value="클레드">클레드</option>
+                        <option value="키아나">키아나</option>
+                        <option value="킨드레드">킨드레드</option>
+                        <option value="타릭">타릭</option>
+                        <option value="탈론">탈론</option>
+                        <option value="탈리야">탈리야</option>
+                        <option value="탐 켄치">탐 켄치</option>
+                        <option value="트런들">트런들</option>
+                        <option value="트리스타나">트리스타나</option>
+                        <option value="트린다미어">트린다미어</option>
+                        <option value="트위스티드 페이트">트위스티드 페이트</option>
+                        <option value="트위치">트위치</option>
+                        <option value="티모">티모</option>
+                        <option value="파이크">파이크</option>
+                        <option value="판테온">판테온</option>
+                        <option value="피들스틱">피들스틱</option>
+                        <option value="피오라">피오라</option>
+                        <option value="피즈">피즈</option>
+                        <option value="하이머딩거">하이머딩거</option>
+                        <option value="헤카림">헤카림</option>
+                    </select>
+                </div>
+
+                <div class="user-box">
+                    <label for="aspiration">참가 포부</label>
+                    <textarea id="aspiration" name="aspiration" rows="4" cols="50" placeholder="참가 포부를 적어주세요."
+                        required></textarea>
+                </div>
+
+                <a href="#" id="submitBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    제출
+                </a>
+            </form>
+        </div>
+
+        <a href="https://discord.gg/UGGGYrcy" target="_blank">디스코드 들어가기!</a>
+
+        <div class="clock">
+            <p id="date"></p>
+            <p id="time"></p>
+        </div>
+
+        <!-- <div class="countclock">
+            <p id="countdate">신청 마감</p>
+            <p id="counttime"></p>
+        </div> -->
+    </main>
+
+    <footer>
+        <p>Copyright&copy; 2023 롤낳대. All rights reserved.</p>
+        <p>주최자: 이찬영</p>
+        <p>개발자: 김동현</p>
+    </footer>
+</body>
+<script src="롤낳대/source/script.js"></script>
+
+</html>
